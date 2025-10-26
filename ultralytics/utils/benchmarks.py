@@ -652,14 +652,30 @@ class ProfileModels:
         # Compute number of runs as higher of min_time or num_timed_runs
         num_runs = max(round(self.min_time / (elapsed + eps) * self.num_warmup_runs), self.num_timed_runs)
 
+        # Pre-allocate numpy arrays for timed runs
+        run_times = np.zeros(num_runs, dtype=np.float64)
+        timestamps = np.zeros(num_runs, dtype=np.float64)
+        
         # Timed runs
-        run_times = []
-        for _ in TQDM(range(num_runs), desc=onnx_file):
+        for i in TQDM(range(num_runs), desc=onnx_file):
             start_time = time.time()
             sess.run([output_name], input_data_dict)
-            run_times.append((time.time() - start_time) * 1000)  # Convert to milliseconds
+            run_times[i] = (time.time() - start_time) * 1000  # Convert to milliseconds
+            timestamps[i] = start_time
 
-        run_times = self.iterative_sigma_clipping(np.array(run_times), sigma=2, max_iters=5)  # sigma clipping
+        # Save to CSV
+        csv_file = Path(onnx_file).with_suffix(".onnx_times.csv")
+        np.savetxt(
+            csv_file,
+            np.column_stack((timestamps, run_times)),
+            delimiter=", ",
+            header="timestamp, inference_time_ms",
+            comments="",
+            fmt="%.2f",
+        )
+        LOGGER.info(f"Saved ONNX timing data to {csv_file}")
+
+        run_times = self.iterative_sigma_clipping(run_times, sigma=2, max_iters=5)  # sigma clipping
         return np.mean(run_times), np.std(run_times)
 
     def generate_table_row(
