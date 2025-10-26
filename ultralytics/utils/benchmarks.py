@@ -607,6 +607,24 @@ class ProfileModels:
         vmrss_mb = int(parts[1]) * page_size_mb
         return vmrss_mb, vmsize_mb
 
+    @staticmethod
+    def get_rpi_temperature_c() -> float:
+        """
+        Get Raspberry Pi CPU temperature in Celsius if available.
+
+        Returns:
+            (float): Temperature in Celsius, or NaN if unavailable/not Raspberry Pi.
+        """
+        if not LINUX:
+            return float("nan")
+        assert len(glob.glob("/sys/class/thermal/thermal_zone*/temp")) == 1, "Too many/none thermal zones found"
+        path = "/sys/class/thermal/thermal_zone0/temp"
+        if os.path.exists(path):
+            with open(path, "r") as f:
+                milli_c = int(f.read().strip())
+                return milli_c / 1000.0
+        return float("nan")
+
     def profile_onnx_model(self, onnx_file: str, eps: float = 1e-3):
         """
         Profile an ONNX model, measuring average inference time and standard deviation across multiple runs.
@@ -676,6 +694,7 @@ class ProfileModels:
         timestamps = np.zeros(num_runs, dtype=np.float64)
         memory_rss = np.zeros(num_runs, dtype=np.float64)
         memory_vms = np.zeros(num_runs, dtype=np.float64)
+        temperatures = np.full(num_runs, np.nan, dtype=np.float64)
         
         # Timed runs
         for i in TQDM(range(num_runs), desc=onnx_file):
@@ -686,14 +705,15 @@ class ProfileModels:
             vmrss, vmsize = self.get_process_memory_mb()
             memory_rss[i] = vmrss  # Resident memory in MB
             memory_vms[i] = vmsize  # Virtual memory in MB
+            temperatures[i] = self.get_rpi_temperature_c()
 
         # Save to CSV
         csv_file = Path(onnx_file).with_suffix(".onnx_times.csv")
         np.savetxt(
             csv_file,
-            np.column_stack((timestamps, run_times, memory_rss, memory_vms)),
+            np.column_stack((timestamps, run_times, memory_rss, memory_vms, temperatures)),
             delimiter=", ",
-            header="timestamp, inference_time_ms, memory_rss_mb, memory_vms_mb",
+            header="timestamp, inference_time_ms, memory_rss_mb, memory_vms_mb, temperature_c",
             comments="",
             fmt="%.2f",
         )
