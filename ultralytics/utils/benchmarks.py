@@ -588,6 +588,25 @@ class ProfileModels:
         """Check whether the tensor shape in the ONNX model is dynamic."""
         return not all(isinstance(dim, int) and dim >= 0 for dim in tensor_shape)
 
+    @staticmethod
+    def get_process_memory_mb(page_size_mb = os.sysconf("SC_PAGE_SIZE") / (1024.0 * 1024.0)):
+        """
+        Get current process memory usage in MB (Linux only).
+
+        Returns:
+            (tuple[float, float]): (VmRSS, VmSize) in MB, or (0.0, 0.0) if not on Linux or unable to read.
+                VmRSS: Resident Set Size - actual physical memory used
+                VmSize: Virtual Memory Size - total virtual memory allocated
+        """
+        if not LINUX:
+            return 0.0, 0.0
+        # /proc/self/statm contains: size resident shared text lib data dt (all in pages)
+        with open("/proc/self/statm", "r") as f:
+            parts = f.readline().split()
+        vmsize_mb = int(parts[0]) * page_size_mb
+        vmrss_mb = int(parts[1]) * page_size_mb
+        return vmrss_mb, vmsize_mb
+
     def profile_onnx_model(self, onnx_file: str, eps: float = 1e-3):
         """
         Profile an ONNX model, measuring average inference time and standard deviation across multiple runs.
@@ -655,6 +674,8 @@ class ProfileModels:
         # Pre-allocate numpy arrays for timed runs
         run_times = np.zeros(num_runs, dtype=np.float64)
         timestamps = np.zeros(num_runs, dtype=np.float64)
+        memory_rss = np.zeros(num_runs, dtype=np.float64)
+        memory_vms = np.zeros(num_runs, dtype=np.float64)
         
         # Timed runs
         for i in TQDM(range(num_runs), desc=onnx_file):
@@ -662,14 +683,17 @@ class ProfileModels:
             sess.run([output_name], input_data_dict)
             run_times[i] = (time.time() - start_time) * 1000  # Convert to milliseconds
             timestamps[i] = start_time
+            vmrss, vmsize = self.get_process_memory_mb()
+            memory_rss[i] = vmrss  # Resident memory in MB
+            memory_vms[i] = vmsize  # Virtual memory in MB
 
         # Save to CSV
         csv_file = Path(onnx_file).with_suffix(".onnx_times.csv")
         np.savetxt(
             csv_file,
-            np.column_stack((timestamps, run_times)),
+            np.column_stack((timestamps, run_times, memory_rss, memory_vms)),
             delimiter=", ",
-            header="timestamp, inference_time_ms",
+            header="timestamp, inference_time_ms, memory_rss_mb, memory_vms_mb",
             comments="",
             fmt="%.2f",
         )
