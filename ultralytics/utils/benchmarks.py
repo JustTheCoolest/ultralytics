@@ -652,8 +652,9 @@ class ProfileModels:
             if self.check_dynamic(input_tensor.shape):
                 if len(input_tensor.shape) != 4 and self.check_dynamic(input_tensor.shape[1:]):
                     raise ValueError(f"Unsupported dynamic shape {input_tensor.shape} of {input_tensor.name}")
+                N = 1
                 input_shape = (
-                    (1, 3, self.imgsz, self.imgsz) if len(input_tensor.shape) == 4 else (1, *input_tensor.shape[1:])
+                    (N, 3, self.imgsz, self.imgsz) if len(input_tensor.shape) == 4 else (N, *input_tensor.shape[1:])
                 )
             else:
                 input_shape = input_tensor.shape
@@ -705,7 +706,7 @@ class ProfileModels:
             vmrss, vmsize = self.get_process_memory_mb()
             memory_rss[i] = vmrss  # Resident memory in MB
             memory_vms[i] = vmsize  # Virtual memory in MB
-            temperatures[i] = self.get_rpi_temperature_c()
+            # temperatures[i] = self.get_rpi_temperature_c()
 
         # Save to CSV
         csv_file = Path(onnx_file).with_suffix(".onnx_times.csv")

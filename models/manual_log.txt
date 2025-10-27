@@ -1,0 +1,21 @@
+root@DESKTOP-JG3EPBN:~/Projects/ultralytics# python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.10.12 torch-2.0.1+cu117 CPU (AMD Ryzen 5 5625U with Radeon Graphics)
+Profiling: ['models/mrtdetr.onnx']
+models/mrtdetr.onnx: 100% ━━━━━━━━━━━━ 100/100 0.4it/s 4:07
+Saved ONNX timing data to models/mrtdetr.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (AMD Ryzen 5 5625U with Radeon Graphics) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|-------------------------------------------------------------------------|------------------------------------|--------------------|-------------------|
+| mrtdetr            | 640 | - | 2449.6±13.7 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+root@DESKTOP-JG3EPBN:~/Projects/ultralytics# python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.10.12 torch-2.0.1+cu117 CPU (AMD Ryzen 5 5625U with Radeon Graphics)
+Profiling: ['models/mrtdetr.onnx']
+models/mrtdetr.onnx: 100% ━━━━━━━━━━━━ 214/214 3.5it/s 1:01
+Saved ONNX timing data to models/mrtdetr.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (AMD Ryzen 5 5625U with Radeon Graphics) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|-------------------------------------------------------------------------|------------------------------------|--------------------|-------------------|
+| mrtdetr            | 640 | - | 279.6±4.8 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+root@DESKTOP-JG3EPBN:~/Projects/ultralytics#
