@@ -706,7 +706,7 @@ class ProfileModels:
             vmrss, vmsize = self.get_process_memory_mb()
             memory_rss[i] = vmrss  # Resident memory in MB
             memory_vms[i] = vmsize  # Virtual memory in MB
-            # temperatures[i] = self.get_rpi_temperature_c()
+            temperatures[i] = self.get_rpi_temperature_c()
 
         # Save to CSV
         csv_file = Path(onnx_file).with_suffix(".onnx_times.csv")
