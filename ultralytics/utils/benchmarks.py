@@ -652,7 +652,7 @@ class ProfileModels:
             if self.check_dynamic(input_tensor.shape):
                 if len(input_tensor.shape) != 4 and self.check_dynamic(input_tensor.shape[1:]):
                     raise ValueError(f"Unsupported dynamic shape {input_tensor.shape} of {input_tensor.name}")
-                N = 1
+                N = 2
                 input_shape = (
                     (N, 3, self.imgsz, self.imgsz) if len(input_tensor.shape) == 4 else (N, *input_tensor.shape[1:])
                 )
