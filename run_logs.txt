@@ -189,3 +189,165 @@ Saved ONNX timing data to models/fasterrcnn_resnet50_fpn_v2_Opset18.onnx_times.c
 |-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
 | fasterrcnn_resnet50_fpn_v2_Opset18 | 640 | - | 28141.0±1036.6 ms | 0.0±0.0 ms | 0.0 | 0.0 |
 (venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov8n.onnx']
+2025-11-01 11:44:32.679691075 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"
+models/yolov8n.onnx: 100% ━━━━━━━━━━━━ 511/511 1.5it/s 5:33
+Saved ONNX timing data to models/yolov8n.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov8n            | 640 | - | 644.0±39.5 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolox_nano.onnx']
+2025-11-01 12:09:10.908978221 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"
+models/yolox_nano.onnx: 100% ━━━━━━━━━━━━ 1543/1543 4.4it/s 5:54
+Saved ONNX timing data to models/yolox_nano.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolox_nano         | 640 | - | 224.3±27.5 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov9-m.onnx']
+2025-11-01 12:39:04.064774744 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"
+models/yolov9-m.onnx: 100% ━━━━━━━━━━━━ 100/100 0.2it/s 9:32
+Saved ONNX timing data to models/yolov9-m.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov9-m           | 640 | - | 5696.2±73.3 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov8m.onnx']
+2025-11-01 13:05:52.386933361 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"
+models/yolov8m.onnx: 100% ━━━━━━━━━━━━ 116/116 0.4it/s 5:15
+Saved ONNX timing data to models/yolov8m.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov8m            | 640 | - | 2712.1±38.4 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov7.onnx']
+2025-11-01 13:26:20.677577467 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"
+models/yolov7.onnx: 100% ━━━━━━━━━━━━ 100/100 0.3it/s 6:40
+Saved ONNX timing data to models/yolov7.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov7             | 640 | - | 3999.1±53.7 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/rtdetr_r50.onnx']
+2025-11-01 13:50:48.061519201 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"
+models/rtdetr_r50.onnx: 100% ━━━━━━━━━━━━ 100/100 0.1it/s 17:25
+Saved ONNX timing data to models/rtdetr_r50.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| rtdetr_r50         | 640 | - | 10444.7±192.5 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+
+sowmith@raspberrypi:~/ultralytics$ source venv/bin/activate
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov5mu.onnx']
+2025-11-01 14:27:38.694388258 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"
+models/yolov5mu.onnx: 100% ━━━━━━━━━━━━ 131/131 0.4it/s 5:21
+Saved ONNX timing data to models/yolov5mu.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov5mu           | 640 | - | 2430.0±53.9 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+
+
+
+sowmith@raspberrypi:~/ultralytics$ source venv/bin/activate
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov5su.onnx']
+2025-11-01 14:57:27.224503498 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"
+models/yolov5su.onnx: 100% ━━━━━━━━━━━━ 336/336 1.0it/s 5:49
+Saved ONNX timing data to models/yolov5su.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov5su           | 640 | - | 1047.6±44.3 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov5nu.onnx']
+2025-11-01 15:56:18.534016082 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"
+models/yolov5nu.onnx: 100% ━━━━━━━━━━━━ 566/566 1.6it/s 5:46
+Saved ONNX timing data to models/yolov5nu.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov5nu           | 640 | - | 612.2±37.6 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+
+
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov9m.onnx']
+2025-11-01 16:52:06.925478550 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"
+models/yolov9m.onnx: 100% ━━━━━━━━━━━━ 102/102 0.3it/s 5:23
+Saved ONNX timing data to models/yolov9m.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov9m            | 640 | - | 3160.5±50.0 ms | 0.0±0.0 ms | 0.0 | 0.0 |
