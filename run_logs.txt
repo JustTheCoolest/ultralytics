@@ -351,3 +351,38 @@ Saved ONNX timing data to models/yolov9m.onnx_times.csv
 | Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
 |-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
 | yolov9m            | 640 | - | 3160.5±50.0 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+
+
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov9t.onnx']
+2025-11-01 17:33:57.212015070 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"
+models/yolov9t.onnx: 100% ━━━━━━━━━━━━ 463/463 1.3it/s 5:59
+Saved ONNX timing data to models/yolov9t.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov9t            | 640 | - | 772.9±65.9 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+
+
+
+
+sowmith@raspberrypi:~/ultralytics$ source venv/bin/activate
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov9s.onnx']
+2025-11-01 17:59:05.004610577 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"
+models/yolov9s.onnx: 100% ━━━━━━━━━━━━ 216/216 0.6it/s 5:42
+Saved ONNX timing data to models/yolov9s.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov9s            | 640 | - | 1594.6±78.6 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+
+
+
