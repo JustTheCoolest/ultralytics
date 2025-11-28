@@ -389,10 +389,10 @@ Saved ONNX timing data to models/yolov9s.onnx_times.csv
 (venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
 Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.7.1+cpu CPU (aarch64)
 Profiling: ['models/yolox_tiny.onnx']
-models/yolox_tiny.onnx: 100% ━━━━━━━━━━━━ 760/760 2.3it/s 5:36
+models/yolox_tiny.onnx: 100% ━━━━━━━━━━━━ 814/814 2.3it/s 6:00
 Saved ONNX timing data to models/yolox_tiny.onnx_times.csv
 
 
 | Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
 |-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
-| yolox_tiny         | 640 | - | 451.1±30.2 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+| yolox_tiny         | 640 | - | 441.9±33.0 ms | 0.0±0.0 ms | 0.0 | 0.0 |
