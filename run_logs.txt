@@ -396,3 +396,32 @@ Saved ONNX timing data to models/yolox_tiny.onnx_times.csv
 | Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
 |-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
 | yolox_tiny         | 640 | - | 441.9±33.0 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/mrtdetr_h100_278.onnx']
+models/mrtdetr_h100_278.onnx: 100% ━━━━━━━━━━━━ 100/100 0.2it/s 7:07
+Saved ONNX timing data to models/mrtdetr_h100_278.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| mrtdetr_h100_278   | 640 | - | 4286.9±95.7 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/mrtdetr.onnx']
+models/mrtdetr.onnx: 100% ━━━━━━━━━━━━ 100/100 0.2it/s 7:07
+Saved ONNX timing data to models/mrtdetr.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| mrtdetr            | 640 | - | 4268.6±101.3 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
