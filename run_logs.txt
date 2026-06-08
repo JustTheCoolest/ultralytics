@@ -494,3 +494,149 @@ Saved ONNX timing data to models/mrtdetr_rtx269.onnx_times.csv
 |-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
 | mrtdetr_rtx269     | 640 | - | 4215.5±88.5 ms | 0.0±0.0 ms | 0.0 | 0.0 |
 (venv) sowmith@raspberrypi:~/ultralytics$
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov5mu.onnx']
+models/yolov5mu.onnx: 100% ━━━━━━━━━━━━ 125/125 0.4it/s 5:12
+Saved ONNX timing data to models/yolov5mu.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov5mu           | 640 | - | 2469.7±65.0 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/Repo1/yolov5mu_quant.onnx']
+models/Repo1/yolov5mu_quant.onnx: 100% ━━━━━━━━━━━━ 128/128 0.4it/s 5:12
+Saved ONNX timing data to models/Repo1/yolov5mu_quant.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov5mu_quant     | 640 | - | 2416.6±87.2 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/Repo1/yolov8m_quant.onnx']
+
+models/Repo1/yolov8m_quant.onnx: 100% ━━━━━━━━━━━━ 111/111 0.4it/s 5:13
+Saved ONNX timing data to models/Repo1/yolov8m_quant.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov8m_quant      | 640 | - | 2815.4±89.5 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/yolov8s.onnx']
+models/yolov8s.onnx: 100% ━━━━━━━━━━━━ 248/248 0.8it/s 5:09
+Saved ONNX timing data to models/yolov8s.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov8s            | 640 | - | 1234.8±36.2 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/Repo1/yolov8s_quant.onnx']
+models/Repo1/yolov8s_quant.onnx: 100% ━━━━━━━━━━━━ 212/212 0.6it/s 5:28
+Saved ONNX timing data to models/Repo1/yolov8s_quant.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov8s_quant      | 640 | - | 1538.1±63.3 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/Repo1/yolov8n_quant.onnx']
+models/Repo1/yolov8n_quant.onnx: 100% ━━━━━━━━━━━━ 403/403 1.2it/s 5:38
+Saved ONNX timing data to models/Repo1/yolov8n_quant.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov8n_quant      | 640 | - | 828.5±44.6 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/rtdetr_v18.onnx']
+models/rtdetr_v18.onnx: 100% ━━━━━━━━━━━━ 100/100 0.2it/s 8:41
+Saved ONNX timing data to models/rtdetr_v18.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| rtdetr_v18         | 640 | - | 5216.3±92.6 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/Repo1/rtdetr_v18_quant.onnx']
+models/Repo1/rtdetr_v18_quant.onnx: 100% ━━━━━━━━━━━━ 100/100 0.2it/s 8:09
+Saved ONNX timing data to models/Repo1/rtdetr_v18_quant.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| rtdetr_v18_quant   | 640 | - | 4888.6±75.8 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/Repo1/yolov5su_quant.onnx']
+models/Repo1/yolov5su_quant.onnx: 100% ━━━━━━━━━━━━ 279/279 0.9it/s 5:18
+Saved ONNX timing data to models/Repo1/yolov5su_quant.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov5su_quant     | 640 | - | 1124.7±47.4 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+
+
+
+
+
+
+(venv) sowmith@raspberrypi:~/ultralytics$ python3 pichart.py
+Ultralytics 8.3.221 🚀 Python-3.12.3 torch-2.9.0+cpu CPU (aarch64)
+Profiling: ['models/Repo1/yolov5nu_quant.onnx']
+models/Repo1/yolov5nu_quant.onnx: 100% ━━━━━━━━━━━━ 476/476 1.5it/s 5:20
+Saved ONNX timing data to models/Repo1/yolov5nu_quant.onnx_times.csv
+
+
+| Model | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU (aarch64) ONNX<br>(ms) | Speed<br><sup>GPU TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+|-------|-----------------------|----------------------|------------------------------------------|------------------------------------|--------------------|-------------------|
+| yolov5nu_quant     | 640 | - | 663.8±40.7 ms | 0.0±0.0 ms | 0.0 | 0.0 |
+(venv) sowmith@raspberrypi:~/ultralytics$
+(venv) sowmith@raspberrypi:~$
